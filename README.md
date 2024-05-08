@@ -34,7 +34,7 @@ This secret key searching is in beta and later version might have increased accu
 
 ## Installation Steps
 
-1. Clone SubDomainzer from git:
+1. Clone SubDomainFinder from git:
 ```
 git clone https://github.com/ipmartnetwork/SubDomainFinder.git
 ```
