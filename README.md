@@ -40,7 +40,7 @@ git clone https://github.com/ipmartnetwork/SubDomainFinder.git
 ```
 2. Change the directory:
 ```
-cd SubDomainizer
+cd SubDomainFinder
 ```
 
 3. Install the requirements:
