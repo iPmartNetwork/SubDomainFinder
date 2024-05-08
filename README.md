@@ -9,14 +9,14 @@
 </p>
 
 
-## SubDomainizer
+## SubDomainFinder
 
-SubDomainizer is a tool designed to find hidden subdomains and secrets present is either webpage, Github, and external javascripts present in the given URL.
+SubDomainFinder is a tool designed to find hidden subdomains and secrets present is either webpage, Github, and external javascripts present in the given URL.
 This tool also finds S3 buckets, cloudfront URL's and more from those JS files which could be interesting like S3 bucket is open to read/write, or subdomain takeover and similar case for cloudfront.
 It also scans inside given folder which contains your files.
 
 ## Cloud Storage Services Supported:
-SubDomainizer can find URL's for following cloud storage services:
+SubDomainFinder can find URL's for following cloud storage services:
 ```
 1. Amazon AWS services (cloudfront and S3 buckets)
 2. Digitalocean spaces 
@@ -26,7 +26,7 @@ SubDomainizer can find URL's for following cloud storage services:
 6. RackCDN. 
 ```
 ## Secret Key's Searching: (beta)
-SubDomainizer will also find secrets present in content of the page and javascripts files.
+SubDomainFinder will also find secrets present in content of the page and javascripts files.
 Those secret finding depends on some specific keywords and *Shannon Entropy* formula.
 It might be possible that some secrets which searched by tool will be false positive.
 This secret key searching is in beta and later version might have increased accuracy for search results.
@@ -78,44 +78,44 @@ Short Form    | Long Form     | Description
 
 * To list help about the tool:
 ```
-python3 SubDomainizer.py -h
+python3 SubDomainFinder.py -h
 ```
 * To find subdomains, s3 buckets, and cloudfront URL's for given single URL:
 ```
-python3 SubDomainizer.py -u http://www.example.com
+python3 SubDomainFinder.py -u http://www.example.com
 ```
 * To find subdomains from given list of URL (file given):
 ```
-python3 SubDomainizer.py -l list.txt
+python3 SubDomainFinder.py -l list.txt
 ```
 
 * To save the results in (output.txt) file:
 ```
-python3 SubDomainizer.py -u https://www.example.com -o output.txt
+python3 SubDomainFinder.py -u https://www.example.com -o output.txt
 ```
 * To give cookies:
 ```
-python3 SubDomainizer.py -u https://www.example.com -c "test=1; test=2"
+python3 SubDomainFinder.py -u https://www.example.com -c "test=1; test=2"
 ```
 * To scan via github:
 ```
-python3 SubDomainizer.py -u https://www.example.com -o output.txt -gt <github_token> -g 
+python3 SubDomainFinder.py -u https://www.example.com -o output.txt -gt <github_token> -g 
 ```
 * No SSL Certificate Verification:
 ```
-python3 SubDomainizer.py -u https://www.example.com -o output.txt -gt <github_token> -g  -k
+python3 SubDomainFinder.py -u https://www.example.com -o output.txt -gt <github_token> -g  -k
 ```
 * Folder Scanning:
 ```
-python3 SubDomainizer.py -f /path/to/root/folder/having/files/and/folders/  -d example.com  -gt <github_token> -g  -k
+python3 SubDomainFinder.py -f /path/to/root/folder/having/files/and/folders/  -d example.com  -gt <github_token> -g  -k
 ```
 * Subject Alternative Names:
 ```
-python3 SubDomainizer.py -u https://www.example -san all
+python3 SubDomainFinder.py -u https://www.example -san all
 ```
 * Saving secrets to a file scan found in github:
 ```
-python3 SubDomainizer.py -u https://www.example.com -o output.txt -gt <github_token> -g -gop filename_to_save
+python3 SubDomainFinder.py -u https://www.example.com -o output.txt -gt <github_token> -g -gop filename_to_save
 ```
 
 
